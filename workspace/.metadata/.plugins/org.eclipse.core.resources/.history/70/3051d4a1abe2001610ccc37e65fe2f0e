@@ -1,0 +1,80 @@
+import java.util.Scanner;
+//Your submission should *ONLY* use the following class name
+public class Problem
+{
+	public static int chocolatesPurchased;
+	
+    public static void main(String[] args)
+    {
+
+       Scanner in = new Scanner(System.in);
+       
+       int price = in.nextInt();
+       int wrappers = in.nextInt();
+       int friends = in.nextInt();
+       
+       for(int i = 1; i <= friends; ++i)
+       {
+    	   int money = in.nextInt();
+    	   chocolatesPurchased += baseCalculation(money, price);
+    	   recursiveCalculation(chocolatesPurchased, wrappers, true);
+//    	   Friend friend1 = new Friend(in.nextInt(), chocolatesPurchased);
+    	   System.out.println(chocolatesPurchased);
+    	   chocolatesPurchased = 0;
+       }
+ 
+
+    }
+    public class Friend
+    {
+    	int money;
+    	int purchases;
+    	public Friend(int money, int purchases)
+    	{
+    		this.money = money;
+    		this.purchases = purchases;
+    	}
+    	public int getMoney()
+    	{
+    		return money;
+    	}
+    	public void setMoney(int amt){
+    		money = amt;
+    	}
+    	public int getPurchases()
+    	{
+    		return money;
+    	}
+    	public void incrementPurchases(int amt)
+    	{
+    		purchases += amt;
+    	}
+    
+    	
+    }
+    public static int baseCalculation(int money, int pricePerChocolate)
+    {
+    	int chocolatesPurchased = money * pricePerChocolate;
+    	return chocolatesPurchased;
+    }
+    public static int recursiveCalculation(int numOfChocolates, int chocolatePerWrappers, boolean continues)
+    {
+    	while(continues == true)
+    	{
+    		if(numOfChocolates%chocolatePerWrappers < 2)
+    		{
+    			continues = false;
+    			break;
+    		}
+    		else
+    		{
+
+        		chocolatesPurchased += numOfChocolates/chocolatePerWrappers;
+        		chocolatesPurchased += recursiveCalculation(numOfChocolates % chocolatePerWrappers, chocolatePerWrappers, true);
+    		}
+    	}
+    	return chocolatesPurchased;
+    	
+    }
+
+}

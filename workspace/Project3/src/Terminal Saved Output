@@ -1,0 +1,109 @@
+Last login: Fri Nov 25 11:07:30 on ttys000
+Danielas-MacBook-Pro:~ dtravie$ cd /Users/dtravie/Downloads/UnitTest 
+Danielas-MacBook-Pro:UnitTest dtravie$ ./unitest.sh
+javac: file not found: *.java
+Usage: javac <options> <source files>
+use -help for a list of possible options
+Error: Could not find or load main class CurrencyExchangeTestRunner
+rm: *.class: No such file or directory
+rm: test/*.class: No such file or directory
+Danielas-MacBook-Pro:UnitTest dtravie$ ls
+test		unitest.bat	unitest.sh
+Danielas-MacBook-Pro:UnitTest dtravie$ ./unitest.sh
+javac: file not found: *.java
+Usage: javac <options> <source files>
+use -help for a list of possible options
+Error: Could not find or load main class CurrencyExchangeTestRunner
+rm: *.class: No such file or directory
+rm: test/*.class: No such file or directory
+Danielas-MacBook-Pro:UnitTest dtravie$ ls
+test		unitest.bat	unitest.sh
+Danielas-MacBook-Pro:UnitTest dtravie$ cd
+Danielas-MacBook-Pro:~ dtravie$ ls
+AndroidStudioProjects	Google Drive		Pictures
+Applications		Library			Public
+Desktop			Movies			pokedex
+Documents		Music
+Downloads		OneDrive
+Danielas-MacBook-Pro:~ dtravie$ cd /Users/dtravie/Downloads/UnitTest 
+Danielas-MacBook-Pro:UnitTest dtravie$ ls
+test		unitest.bat	unitest.sh
+Danielas-MacBook-Pro:UnitTest dtravie$ ls
+CurrencyExchange.class	unitest.bat
+test			unitest.sh
+Danielas-MacBook-Pro:UnitTest dtravie$ ./unitest
+-bash: ./unitest: No such file or directory
+Danielas-MacBook-Pro:UnitTest dtravie$ chmod -x unitest.sh
+Danielas-MacBook-Pro:UnitTest dtravie$ ls
+CurrencyExchange.class	unitest.bat
+test			unitest.sh
+Danielas-MacBook-Pro:UnitTest dtravie$ ./unitest
+-bash: ./unitest: No such file or directory
+Danielas-MacBook-Pro:UnitTest dtravie$ ls
+CurrencyExchange.class	unitest.bat
+test			unitest.sh
+Danielas-MacBook-Pro:UnitTest dtravie$ chmod -X unitest.sh
+Danielas-MacBook-Pro:UnitTest dtravie$ ls
+CurrencyExchange.class	unitest.bat
+test			unitest.sh
+Danielas-MacBook-Pro:UnitTest dtravie$ chmod +x unitest.sh
+Danielas-MacBook-Pro:UnitTest dtravie$ ls
+CurrencyExchange.class	unitest.bat
+test			unitest.sh
+Danielas-MacBook-Pro:UnitTest dtravie$ ./unitest
+-bash: ./unitest: No such file or directory
+Danielas-MacBook-Pro:UnitTest dtravie$ sudo chmod +x unitest.sh
+Password:
+Danielas-MacBook-Pro:UnitTest dtravie$ ls
+CurrencyExchange.class	unitest.bat
+test			unitest.sh
+Danielas-MacBook-Pro:UnitTest dtravie$ ./unitest.sh 
+javac: file not found: *.java
+Usage: javac <options> <source files>
+use -help for a list of possible options
+Error: Could not find or load main class CurrencyExchangeTestRunner
+rm: test/*.class: No such file or directory
+Danielas-MacBook-Pro:UnitTest dtravie$ cd
+Danielas-MacBook-Pro:~ dtravie$ ls
+AndroidStudioProjects	Google Drive		Pictures
+Applications		Library			Public
+Desktop			Movies			pokedex
+Documents		Music
+Downloads		OneDrive
+Danielas-MacBook-Pro:~ dtravie$ cd /Users/dtravie/Downloads/UnitTest 
+Danielas-MacBook-Pro:UnitTest dtravie$ ls
+CurrencyExchange.java	unitest.bat
+test			unitest.sh
+Danielas-MacBook-Pro:UnitTest dtravie$ ./unitest.sh 
+You successfully deposited 200.0You successfully deposited 1234.0 U.S. DollarsYou successfully deposited -200.0 U.S. DollarsYou successfully deposited 0.0 U.S. DollarsYou successfully deposited 2345.0 European EuroYou successfully deposited 3456.0 Canadian DollarYou successfully deposited 6789.0 Japanese Yen[Score:83, 
+CurrencyExchangeDepositTest:
+	Score:20 out of 30.0
+	Test Cases Total:6 Failure:2
+	Failed Test Cases:
+		givenInvalidCurrencyTypeWhenDepositThenFailureAndBalanceNotChanged
+		givenNegativeNZeroAmountWhenDepositThenFailureNBalanceNotChanged
+, 
+CurrencyExchangeWithdrawTest:
+	Score:28 out of 35.0
+	Test Cases Total:10 Failure:2
+	Failed Test Cases:
+		givenInvalidCurrencyTypeWhenWithdrawThenFailureAndBalanceNotChanged
+		givenNegativeNZeroAmountWhenWithdrawThenFailureNBalanceNotChanged
+, 
+CurrencyExchangeConversionTest:
+	Score:25 out of 25.0
+	Test Cases Total:11 Failure:0
+, 
+CurrencyExchangeMainMenuTest:
+	Score:4 out of 4.0
+	Test Cases Total:4 Failure:0
+, 
+CurrencyExchangeCurrencyMenuTest:
+	Score:4 out of 4.0
+	Test Cases Total:11 Failure:0
+, 
+CurrencyExchangePrintTableTest:
+	Score:2 out of 2.0
+	Test Cases Total:1 Failure:0
+]
+Danielas-MacBook-Pro:UnitTest dtravie$ 

@@ -1,0 +1,48 @@
+import java.util.Scanner;
+//Your submission should *ONLY* use the following class name
+public class Problem
+{
+	public static int chocolatesPurchased;
+	
+    public static void main(String[] args)
+    {
+
+       Scanner in = new Scanner(System.in);
+       
+       int price = in.nextInt();
+       int wrappers = in.nextInt();
+       int friends = in.nextInt();
+       
+       for(int i = 1; i <= friends; ++i)
+       {
+    	   int friendMoney = in.nextInt();
+    	   chocolatesPurchased += baseCalculation(friendMoney, price);
+    	   recursiveCalculation(chocolatesPurchased, wrappers, true);
+    	   System.out.println(chocolatesPurchased);
+       }
+ 
+
+    }
+ 
+    public static int baseCalculation(int money, int pricePerChocolate)
+    {
+    	int chocolatesPurchased = money * pricePerChocolate;
+    	return chocolatesPurchased;
+    }
+    public static int recursiveCalculation(int numOfChocolates, int pricePerWrapper, boolean continues)
+    {
+    	while(continues == true)
+    	{
+    		if(numOfChocolates%numOfWrapper < 2)
+    		{
+    			continues = false;
+    			break;
+    		}
+    		chocolatesPurchased += numOfChocolates/numOfWrapper;
+    		chocolatesPurchased += recursiveCalculation(numOfChocolates % numOfWrapper, numOfWrapper, true);
+    	}
+    	return chocolatesPurchased;
+    	
+    }
+
+}

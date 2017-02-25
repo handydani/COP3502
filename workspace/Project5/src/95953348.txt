@@ -1,0 +1,8 @@
+Undergraduate Student
+Daniela Travieso
+95953348
+Computer Engineering
+Spell checker is a piese of code that looks at the words given to it and determines if 
+they are speled correctly Specifically, it is a computer program that checks the spelling of words in 
+files of text, typically by comparing stored words Some fansy spell checkers suggest the word that the 
+user mint to write Luckily this is not required for you
